@@ -1,0 +1,206 @@
+
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!--<title> Login and Registration Form in HTML & CSS | CodingLab </title>-->
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="../../../../assets/img/courses-4.jpg" alt="">
+        <div class="text">
+          <span class="text-1">Welcome to <br> SavitaSoft</span>
+          <span class="text-2">Computer Education</span>
+        </div>
+      </div>
+      
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="login-form">
+                
+            </div>
+        </div>
+        <div class="form-content">
+          <div class="login-form" >
+            <div class="title" >Registration</div>
+          <form action="#" [formGroup]="formGroup" >
+            <div class="input-boxes">
+
+                <div class="form-item form-group"> 
+                    <label for="Student_Name" >Student Name :</label>
+                    <input type="text"
+                           formControlName ="studentname"
+                           class="form-control" 
+                           id="Student_Name"
+                           
+                           placeholder="Enter Student Name" required />
+                    <div class="text text-danger"  *ngIf="studentname!.invalid && studentname!.touched">
+                      <div *ngIf="studentname!.errors!['required']">Name is required</div>
+                      <div *ngIf="studentname!.errors!['maxLength']">Name should be 50 character</div>
+                      <div *ngIf="studentname!.errors!['pattern']">Name should be Alphabet</div>
+                      
+                    </div>
+                </div>
+                
+                <div class="form-item">
+                    <label for="Student_Occupation" >Student Occupation :</label>
+                    <input type="text" 
+                           formControlName ="studentoccupation"
+                           class="form-control"
+                           id="Student_Occupation"
+                            
+                           placeholder="Enter your Occupation" required />
+                    <div class="text text-danger"  *ngIf="studentoccupation!.invalid && studentoccupation!.touched">
+                          <div *ngIf="studentoccupation!.errors!['required']">Student Occupation is required</div>
+                          <div *ngIf="studentoccupation!.errors!['maxLength']">It should be of 50 character</div>
+                    </div>
+                </div>
+                
+                <div class="form-item">
+                  <label for="fathername" > Father's Name :</label>
+                  <input type="text"
+                         formControlName ="fathername"
+                         class="form-control"
+                         id="fathername" 
+                         placeholder="Enter Father's Name" required />
+                         <div class="text text-danger"  *ngIf="fathername!.invalid && fathername!.touched">
+                          <div *ngIf="fathername!.errors!['required']"><i class="fa fa-exclamation-triangle" ></i>Father's Name is required</div>
+                          <div *ngIf="fathername!.errors!['maxLength']"><i class="fa fa-exclamation-triangle" ></i>Name should be 50 character</div>
+                    </div>
+              </div>
+              <div class="form-item">
+                <label for="fatheroccupation" >Father Occupation :</label>
+                <input type="text" 
+                       id="fatheroccupation" 
+                       formControlName ="fatheroccupation"
+                       class="form-control"
+
+                       placeholder=" Enter Father Occupation" required />
+                       <div class="text text-danger"  *ngIf="fatheroccupation!.invalid && fatheroccupation!.touched">
+                        <div *ngIf="fatheroccupation!.errors!['required']"><i class="fa fa-exclamation-triangle" ></i>Father Occupation is required</div>
+                        <div *ngIf="fatheroccupation!.errors!['maxLength']"><i class="fa fa-exclamation-triangle" ></i>It should be of 50 character</div>
+                  </div>
+              </div>
+              <div class="form-item">
+                <label for="dob" >Date Of Birth :</label>
+                <input type="date" 
+                       id="dob"
+                       formControlName ="dob"
+                       class="form-control"
+
+                       placeholder=" Enter Your Date of Birth" required />
+                       <div class="text text-danger"  *ngIf="dob!.invalid && dob!.touched">
+                        <div *ngIf="dob!.errors!['required']"><i class="fa fa-exclamation-triangle" ></i>Date of Birth is required</div>
+                  </div>
+              </div>
+        
+                <div class="form-item">
+                  <label for="address" >Address :</label>
+                  <textarea type="text" 
+                            id="address" 
+                            formControlName ="address"
+                            class="form-control"
+
+                            placeholder="Enter Your Address " required ></textarea>
+                            <div class="text text-danger"  *ngIf="address!.invalid && address!.touched">
+                              <div *ngIf="address!.errors!['required']"><i class="fa fa-exclamation-triangle" ></i>Address is required</div>
+                        </div>
+        
+              </div>
+        
+                <div class="form-item">
+                  <label for="mobile" >Mobile Number :</label>
+                  <input type="tel" 
+                         id="mobile"
+                         formControlName ="mobile"
+                         class="form-control"
+
+                         placeholder="Enter 10 digit Mobile Number"  required />
+                         <div class="text text-danger"  *ngIf="mobile!.invalid && mobile!.touched">
+                          <div *ngIf="mobile!.errors!['required']"><i class="fa fa-exclamation-triangle" ></i>Number is required</div>
+                          <div *ngIf="mobile!.errors!['pattern']"><i class="fa fa-exclamation-triangle" ></i>Invalid Number</div>
+                    </div>
+                </div>
+                <div class="form-item">
+                  <label for="Whatsapp_Number" >Whatsapp Number :</label>
+                  <input type="tel" 
+                        id="Whatsapp_Number"
+                         formControlName ="whatsappnbr"
+                         class="form-control"
+
+                         placeholder="Enter 10 digit Whatsapp Number" />
+                         <div class="text text-danger"  *ngIf="whatsappnbr!.invalid && whatsappnbr!.touched">
+                          <div *ngIf="whatsappnbr!.errors!['required']">Number is required</div>
+                          <div *ngIf="whatsappnbr!.errors!['pattern']">>Invalid Number</div>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="parentnumber" >Parent Number :</label>
+                    <input type="tel" 
+                           id="Whatsapp_Number" 
+                           formControlName ="parentnbr"
+                           class="form-control"
+
+                           placeholder="Enter 10 digit Parent Number" />
+                           <div class="text text-danger"  *ngIf="parentnbr!.invalid && parentnbr!.touched">
+                            <div *ngIf="parentnbr!.errors!['required']"> >Number is required</div>
+                            <div *ngIf="parentnbr!.errors!['pattern']" >Invalid Number</div>
+                      </div>
+                  </div>
+                  <div class="form-item">
+                    <label for="email" >E-mail :</label>
+                    <input type="email" 
+                           id="email" 
+                           formControlName ="email"
+                           class="form-control"
+
+                           placeholder="Enter Your Email Id" />
+                           <div class="text text-danger"  *ngIf="email!.invalid && email!.touched">
+                            <div *ngIf="email!.errors!['required']">Email is required</div>
+                            <div *ngIf="email!.errors!['email']"> >Invalid Email</div>
+                      </div>
+                  </div>
+
+                <div class="form-item">
+                  <label for="courses">Select Course :</label>
+                    <ng-select formControlName="course" [multiple]="true" [(ngModel)]="selectedcourses">
+                      <ng-option 
+                        *ngFor="let course of courses"
+                        [value]="course.id" >{{course.name}}</ng-option>
+                      </ng-select>
+                  <div class="text text-danger"  *ngIf="course!.invalid && course!.touched">
+                      <div *ngIf="course!.errors!['required']">Select the Course</div>
+                  </div>
+               </div>
+
+
+             
+              <div class="button input-box" >
+                <button class="hero-text" [disabled]="formGroup.invalid"  (click)="onSubmit()" >Submit</button>
+              </div>
+              
+            </div>
+        </form>
+      </div>
+         <div class="signup-form">
+          
+    </div>
+    </div>
+    </div>
+  </div>
+</body>
+</html>
+
+<div>
+  <h4>
+    student : {{student | json}}
+  </h4>
+</div>

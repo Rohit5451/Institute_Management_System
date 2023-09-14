@@ -1,0 +1,35 @@
+{
+  "companyinfo": [
+    {
+      "name": "ghiolo",
+      "address": "lololo",
+      "address1": "dskhfkjhsakj",
+      "address2": "sdkfljsldkf",
+      "phoneNo": "7894561230",
+      "phoneNo1": "8523697410",
+      "email": "4883322222",
+      "website": "sadasdfa",
+      "id": 5,
+      "logo": "sssss"
+    }
+  ],
+  "student": [],
+  "Employee": [
+    {
+      "empno": "1001",
+      "name": "Rohuuuu",
+      "address": "djsjfldsljsldfjdlf",
+      "phone": "101010101",
+      "salary": "90909090",
+      "id": 1
+    },
+    {
+      "empno": "1001",
+      "name": "sunil",
+      "address": "dharwad",
+      "phone": "101010101",
+      "salary": "10002",
+      "id": 2
+    }
+  ]
+}
